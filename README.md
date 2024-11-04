@@ -49,7 +49,7 @@
 * 尝试修改参数观察效果
 * 尝试添加新功能或改进
 ## 项目结构
-<img width="321" alt="image" src="https://github.com/user-attachments/assets/5045bb67-789d-4216-a1e3-9a42eaab59a5">
+<img width="317" alt="image" src="https://github.com/user-attachments/assets/fbf4bc36-16ea-472b-965c-64c94e135baa">
 
 ## 文件说明
 * data(文件夹)：包含 test 测试集和 train 训练集
