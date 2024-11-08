@@ -5,7 +5,7 @@
 * 结果预测：能够预测一张图片是猫还是狗的概率
   
 **特点：**
-* 使用了TensorFlow框架
+* 使用了TensorFlow2框架
 * 支持GPU加速
 * 包含完整的训练和测试流程
 * 有可视化功能，方便观察训练过程
@@ -18,26 +18,24 @@
 * test.py: 模型测试
 ## 四个主要文件介绍
 **input_data.py: 数据预处理模块**
-* 读取训练数据和标签
-* 将图片数据转换为适合神经网络处理的格式
-* 实现数据批处理功能
+- 读取训练数据和标签,将图片数据转换为适合神经网络处理的格式def get_files(file_dir)
+- 数据预处理,处理单个图片（调整大小、标准化）def process_image(image_path, image_W, image_H)
+- 创建数据集，包括数据增强和批处理def create_dataset(image_list, label_list, image_W, image_H, batch_size, capacity)
 
 **model.py: CNN模型定义**
 
-定义了一个包含5层的CNN网络结构：
-* 2个卷积层（conv1, conv2）
-* 2个池化层（pooling1, pooling2）
-* 2个全连接层（local3, local4）
-* 1个输出层（softmax_linear）
-
- 包含损失函数计算、训练优化器和评估函数
+- CatsDogsModel类：
+  - 两个卷积层（每层16个卷积核）
+  - 两个池化层（降维）
+  - 两个全连接层（特征提取）
+  - 一个输出层（分类）
 
 **training.py: 模型训练**
-* 设置训练参数（批次大小、学习率等）
-* 实现训练循环
-* 保存训练模型
-* 记录训练过程（准确率、损失值）
-* 可视化训练结果
+- 设置训练参数（批次大小、学习率等）
+- 创建和训练模型
+- 记录训练过程（损失值、准确率）
+- 保存训练模型
+- 可视化训练结果
 
 **test.py: 模型测试**
 * 从测试集随机选择一张图片
@@ -59,10 +57,7 @@
 链接：https://pan.quark.cn/s/daa6c9c7f9c8
 * log(文件夹)：保存训练模型和参数
 
-  我用夸克网盘分享了「log」文件夹
-链接：https://pan.quark.cn/s/9358b058e845
-* image(文件夹): 存放训练图和预测结果图
-* input_data.py：负责实现读取数据，生成批次（batch）
+* input_data.py：数据预处理模块，为其他模块提供数据
 * model.py：负责实现我们的神经网络模型
 * training.py：负责实现模型的训练以及评估 【1.先跑这个来训练好模型，再跑test.py，如果直接将log文件夹内存放已训练好的数据，可以直接运行test.py】
 * test.py： 从测试集中随机抽取一张图片, 进行预测是猫还是狗  【2.跑完training.py后，再跑这个来测试图片进行预测猫或狗】
