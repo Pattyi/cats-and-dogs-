@@ -48,7 +48,7 @@
 * 尝试修改参数观察效果
 * 尝试添加新功能或改进
 ## 项目结构
-<img width="317" alt="image" src="https://github.com/user-attachments/assets/fbf4bc36-16ea-472b-965c-64c94e135baa">
+<img width="320" alt="image" src="https://github.com/user-attachments/assets/99050cdd-6d6d-40d0-a610-180a589f1441">
 
 ## 文件说明
 * data(文件夹)：包含 test 测试集和 train 训练集
@@ -56,9 +56,8 @@
   我用夸克网盘分享了「data」文件夹。
 链接：https://pan.quark.cn/s/daa6c9c7f9c8
 * log(文件夹)：保存训练模型和参数
-
 * input_data.py：数据预处理模块，为其他模块提供数据
 * model.py：负责实现我们的神经网络模型
-* training.py：负责实现模型的训练以及评估 【1.先跑这个来训练好模型，再跑test.py，如果直接将log文件夹内存放已训练好的数据，可以直接运行test.py】
+* training.py：负责实现模型的训练以及评估 【1.先跑这个来训练好模型，再跑test.py】
 * test.py： 从测试集中随机抽取一张图片, 进行预测是猫还是狗  【2.跑完training.py后，再跑这个来测试图片进行预测猫或狗】
 
